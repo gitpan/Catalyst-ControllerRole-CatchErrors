@@ -20,10 +20,10 @@ meta-spec:
   version: '1.4'
 name: Catalyst-ControllerRole-CatchErrors
 requires:
-  Catalyst::Runtime: '5.90071'
+  Catalyst::Runtime: '0'
   Moose::Role: '0'
 resources:
   bugtracker: https://github.com/davewood/catalyst-controllerrole-catcherrors/issues
   homepage: https://github.com/davewood/catalyst-controllerrole-catcherrors
   repository: https://github.com/davewood/catalyst-controllerrole-catcherrors.git
-version: '0.01'
+version: '0.02'

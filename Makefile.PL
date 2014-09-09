@@ -20,7 +20,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Catalyst::ControllerRole::CatchErrors",
   "PREREQ_PM" => {
-    "Catalyst::Runtime" => "5.90071",
+    "Catalyst::Runtime" => 0,
     "Moose::Role" => 0
   },
   "TEST_REQUIRES" => {
@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     "Test::Warnings" => 0,
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }
@@ -40,7 +40,7 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
-  "Catalyst::Runtime" => "5.90071",
+  "Catalyst::Runtime" => 0,
   "Catalyst::Test" => 0,
   "FindBin" => 0,
   "HTTP::Exception" => 0,

@@ -1,5 +1,5 @@
 package Catalyst::ControllerRole::CatchErrors;
-$Catalyst::ControllerRole::CatchErrors::VERSION = '0.01';
+$Catalyst::ControllerRole::CatchErrors::VERSION = '0.02';
 use Moose::Role;
 
 requires qw/ catch_errors end /;
@@ -9,7 +9,7 @@ requires qw/ catch_errors end /;
 
 before 'end' => sub {
     my ( $self, $c ) = @_;
-    if ( $c->has_errors ) {
+    if ( scalar @{ $c->error } ) {
         my @errors = @{ $c->error };
         $c->clear_errors;
         $c->forward( $self->action_for('catch_errors'), \@errors );
@@ -30,7 +30,7 @@ Catalyst::ControllerRole::CatchErrors - custom error handling in your controller
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -45,6 +45,7 @@ version 0.01
     }
 
 =head1 DESCRIPTION
+
 If an action throws an error the default behaviour of L<Catalyst|Catalyst::Runtime>
 is to render a default error page and set the response code to 500.
 One usecase where this is problematic is if you have a REST Controller using
