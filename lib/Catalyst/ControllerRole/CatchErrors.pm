@@ -1,5 +1,5 @@
 package Catalyst::ControllerRole::CatchErrors;
-$Catalyst::ControllerRole::CatchErrors::VERSION = '0.03';
+$Catalyst::ControllerRole::CatchErrors::VERSION = '0.04';
 use Moose::Role;
 
 requires qw/ catch_errors end /;
@@ -30,7 +30,7 @@ Catalyst::ControllerRole::CatchErrors - custom error handling in your controller
 
 =head1 VERSION
 
-version 0.03
+version 0.04
 
 =head1 SYNOPSIS
 
